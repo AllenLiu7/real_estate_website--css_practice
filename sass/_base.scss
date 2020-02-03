@@ -39,12 +39,7 @@ body {
   display: grid;
   grid-template-rows: 80vh auto 40vw repeat(3, auto);
   grid-template-columns:
-    [sidebar-start] 8rem [sidebar-end full-start] minmax(6px, 1fr)
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(2rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-    [center-end] minmax(6px, 1fr) [full-end];
-
-  & > * {
-    padding: 10px;
-    font-size: 30px;
-  }
+    [center-end] minmax(2rem, 1fr) [full-end];
 }

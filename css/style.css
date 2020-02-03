@@ -18,10 +18,58 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh auto 40vw repeat(3, auto);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6px, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6px, 1fr) [full-end]; }
-  .container > * {
-    padding: 10px;
-    font-size: 30px; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; }
+
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-2 {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1; }
+  .heading-2--light {
+    color: #f9f7f6; }
+  .heading-2--dark {
+    color: #54483a; }
+
+.heading-3 {
+  font-size: 1.6rem;
+  color: #c69963;
+  text-transform: uppercase; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+  .heading-4--light {
+    color: #f9f7f6; }
+  .heading-4--dark {
+    color: #54483a; }
+
+.btn {
+  background-color: #c69963;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .btn:hover {
+    background-color: #54483a; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-hg {
+  margin-bottom: 8rem; }
 
 .sidebar {
   background-color: #c69963;
@@ -36,8 +84,24 @@ body {
   grid-column: col-end 6/ -1; }
 
 .features {
-  background-color: #f9f7f6;
-  grid-column: center-start/center-end; }
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 60px;
+  padding: 10rem 0; }
+
+.feature {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: min-content 1fr;
+  align-items: center; }
+  .feature__icon {
+    fill: #c69963;
+    width: 4.5rem;
+    height: 4.5rem; }
+  .feature__text {
+    font-size: 1.7rem;
+    grid-column: 2/3; }
 
 .story__picture {
   background-color: #c69963;
@@ -45,7 +109,16 @@ body {
 
 .story__content {
   background-color: #f9f7f6;
-  grid-column: col-end 4/ -1; }
+  grid-column: col-end 4/ -1;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  padding: 6rem 8vw; }
+
+.story__text {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 4rem; }
 
 .homes {
   background-color: #101d2c;
